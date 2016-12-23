@@ -1,0 +1,15 @@
+<?php
+// Converting input text to a  file
+
+$c = $_POST['user_code'];
+$file = 'upload/run.c';
+// Write the contents back to the file
+file_put_contents($file, $c);
+
+// Fetching inputs
+
+exec('python pythonMain.py',$r);
+print_r($r)
+
+?>
+
